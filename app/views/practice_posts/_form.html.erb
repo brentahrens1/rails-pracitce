@@ -1,0 +1,17 @@
+<%= form_with(model: practice_post) do |form| %>
+  <% if practice_post.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(practice_post.errors.count, "error") %> prohibited this practice_post from being saved:</h2>
+
+      <ul>
+        <% practice_post.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

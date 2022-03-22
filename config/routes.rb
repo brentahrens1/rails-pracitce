@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'practice_posts/example'
   resources :practice_posts
   get 'welcome/index'
   get 'welcome/about'

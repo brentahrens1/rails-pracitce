@@ -1,3 +1,10 @@
 <h1>This is the root!</h1>
 
 <%= link_to "About", welcome_about_path %>
+
+<div data-controller="toggle" data-toggle-open="Toggle open" data-toggle-close="Toggle close">
+	<button data-action="click->toggle#toggle" data-toggle-target="btn">Toggle open</button>
+	<div class="dn" data-toggle-target="toggleable">
+		<p>This is the content that will will hide and show.</p>
+	</div>
+</div>

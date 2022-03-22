@@ -8,6 +8,9 @@
 
   # GET /practice_posts/1 or /practice_posts/1.json
   def show
+  end
+
+  def example
     render "example"
   end
 

@@ -69,6 +69,6 @@
 
     # Only allow a list of trusted parameters through.
     def practice_post_params
-      params.fetch(:practice_post, {})
+      params.fetch(:practice_post, {}).permit(:title, :author, :description, :image)
     end
 end

@@ -1,5 +1,12 @@
 <h1>This is the root!</h1>
 
+<% @posts.each do | post | %>
+	<ul>
+		<li><%= post.title %></li>
+		<%= link_to "View", practice_post_path(post) %>
+	</ul>
+<% end %>
+
 <%= link_to "About", welcome_about_path %>
 
 <div data-controller="toggle" data-toggle-open="Toggle open" data-toggle-close="Toggle close">
@@ -8,3 +15,5 @@
 		<p>This is the content that will will hide and show.</p>
 	</div>
 </div>
+
+<%= link_to "New Post", new_practice_post_path %>

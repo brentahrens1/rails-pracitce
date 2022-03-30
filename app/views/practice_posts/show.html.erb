@@ -3,7 +3,12 @@
 <h1><%= @practice_post.title %></h1>
 <h2><%= @practice_post.description %></h2>
 <h3><%= @practice_post.author %></h3> 
-<%= image_tag(@practice_post.image) %>
+<% if @practice_post.codename.present? %>
+	<h2><%=  @practice_post.codename %></h2>
+<% end -%>
+<% if @practice_post.image.present? %>
+	<%= image_tag(@practice_post.image) %>
+<% end -%>
 
 <%= link_to 'Edit', edit_practice_post_path(@practice_post) %> |
 <%= link_to 'Back', practice_posts_path %>
